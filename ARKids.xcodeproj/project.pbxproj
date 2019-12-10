@@ -58,6 +58,7 @@
 		840C513B233B65A300A37F6B /* ProfileInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C5139233B65A300A37F6B /* ProfileInfoCell.swift */; };
 		840C513C233B65A300A37F6B /* ProfileInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840C513A233B65A300A37F6B /* ProfileInfoCell.xib */; };
 		8B4C9734239EC90A0071E11C /* ARKidsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4C9733239EC90A0071E11C /* ARKidsUITests.swift */; };
+		8B4C973D239EDCE30071E11C /* ProcessInfo+UITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4C973C239EDCE30071E11C /* ProcessInfo+UITest.swift */; };
 		CDB2C7F82646438C78084FEA /* libPods-ARKids.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4629DCF2D492E26B51DD2E /* libPods-ARKids.a */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +130,7 @@
 		8B4C9731239EC90A0071E11C /* ARKidsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARKidsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B4C9733239EC90A0071E11C /* ARKidsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKidsUITests.swift; sourceTree = "<group>"; };
 		8B4C9735239EC90A0071E11C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B4C973C239EDCE30071E11C /* ProcessInfo+UITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessInfo+UITest.swift"; sourceTree = "<group>"; };
 		AB4629DCF2D492E26B51DD2E /* libPods-ARKids.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ARKids.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -211,6 +213,7 @@
 				1CD3CF59233B7A3C00B3D9CC /* Views */,
 				1CD3CF4F233B699000B3D9CC /* Cells */,
 				1CD3CF4C233B64E900B3D9CC /* Services */,
+				8B4C973B239EDCBC0071E11C /* Extensions */,
 				1C3E2612233B430600ED5F01 /* AppDelegate.swift */,
 				1C3E2626233B484A00ED5F01 /* JobSelectionVC.swift */,
 				1CD3CF46233B4D5100B3D9CC /* MarketVC.swift */,
@@ -309,6 +312,14 @@
 				8B4C9735239EC90A0071E11C /* Info.plist */,
 			);
 			path = ARKidsUITests;
+			sourceTree = "<group>";
+		};
+		8B4C973B239EDCBC0071E11C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8B4C973C239EDCE30071E11C /* ProcessInfo+UITest.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		C09959A402D522B5F591723E /* Frameworks */ = {
@@ -489,6 +500,7 @@
 				115E5A7C233B7ACD00FB5963 /* User.swift in Sources */,
 				11DB6CDF233BC801009BF09C /* ProfileBalanceCell.swift in Sources */,
 				840C5137233B658800A37F6B /* ProfileProfessionCell.swift in Sources */,
+				8B4C973D239EDCE30071E11C /* ProcessInfo+UITest.swift in Sources */,
 				115E5A78233B764E00FB5963 /* ProfileValueCell.swift in Sources */,
 				840C513B233B65A300A37F6B /* ProfileInfoCell.swift in Sources */,
 				1CD3CF5B233B7A5300B3D9CC /* ProgressView.swift in Sources */,

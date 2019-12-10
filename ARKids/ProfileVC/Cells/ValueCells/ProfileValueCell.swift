@@ -36,9 +36,11 @@ class ProfileValueCell: UICollectionViewCell {
         if skill.currentLevel > 0 {
             switch skill.name {
             case "Deposit":
-                skillAmount.text = String(skill.currentLevel) + " $ " + "+0.8%"
+                let percent = ProcessInfo.isUiTest ? "25" : "0.8"
+                skillAmount.text = String(skill.currentLevel) + " $ " + "+\(percent)%"
             case "Job":
                 skillAmount.text = "+ " + String(Balance.jobIncome) + " $ "
+                skillAmount.accessibilityIdentifier = "depositSum"
             default: break
             }
         }

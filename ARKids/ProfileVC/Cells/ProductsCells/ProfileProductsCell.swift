@@ -108,7 +108,8 @@ class ProfileProductsCell: UITableViewCell {
         guard !product.isFinancialInstrument else {
             Balance.deposit += product.price
             if let rootViewController = UIApplication.shared.keyWindow?.rootViewController {
-                let alert = UIAlertController(title: "Congratulations!", message: "You've just invested in the 0.8% deposit", preferredStyle: .alert)
+                let percent = ProcessInfo.isUiTest ? "25" : "0.8"
+                let alert = UIAlertController(title: "Congratulations!", message: "You've just invested in the \(percent)% deposit", preferredStyle: .alert)
                 alert.addAction(.init(title: "Thanks!", style: .default, handler: nil))
                 rootViewController.present(alert, animated: true, completion: nil)
             }

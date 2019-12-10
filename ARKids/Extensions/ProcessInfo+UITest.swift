@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+extension ProcessInfo {
+    
+    static var isUiTest: Bool {
+        return ProcessInfo.processInfo.arguments.contains("UITest")
+    }
+    
+}
