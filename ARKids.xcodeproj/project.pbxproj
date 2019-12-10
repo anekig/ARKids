@@ -59,6 +59,10 @@
 		840C513C233B65A300A37F6B /* ProfileInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840C513A233B65A300A37F6B /* ProfileInfoCell.xib */; };
 		8B4C9734239EC90A0071E11C /* ARKidsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4C9733239EC90A0071E11C /* ARKidsUITests.swift */; };
 		8B4C973D239EDCE30071E11C /* ProcessInfo+UITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4C973C239EDCE30071E11C /* ProcessInfo+UITest.swift */; };
+		8B4C974023A01E180071E11C /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4C973F23A01E180071E11C /* MainScreen.swift */; };
+		8B4C974223A01E4B0071E11C /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4C974123A01E4B0071E11C /* ProfileScreen.swift */; };
+		8B4C974423A01E5C0071E11C /* MarketScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4C974323A01E5C0071E11C /* MarketScreen.swift */; };
+		8B4C974623A025160071E11C /* BaseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4C974523A025160071E11C /* BaseScreen.swift */; };
 		CDB2C7F82646438C78084FEA /* libPods-ARKids.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4629DCF2D492E26B51DD2E /* libPods-ARKids.a */; };
 /* End PBXBuildFile section */
 
@@ -131,6 +135,10 @@
 		8B4C9733239EC90A0071E11C /* ARKidsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKidsUITests.swift; sourceTree = "<group>"; };
 		8B4C9735239EC90A0071E11C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B4C973C239EDCE30071E11C /* ProcessInfo+UITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessInfo+UITest.swift"; sourceTree = "<group>"; };
+		8B4C973F23A01E180071E11C /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		8B4C974123A01E4B0071E11C /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
+		8B4C974323A01E5C0071E11C /* MarketScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketScreen.swift; sourceTree = "<group>"; };
+		8B4C974523A025160071E11C /* BaseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseScreen.swift; sourceTree = "<group>"; };
 		AB4629DCF2D492E26B51DD2E /* libPods-ARKids.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ARKids.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -308,6 +316,7 @@
 		8B4C9732239EC90A0071E11C /* ARKidsUITests */ = {
 			isa = PBXGroup;
 			children = (
+				8B4C973E23A01DEA0071E11C /* PageObjects */,
 				8B4C9733239EC90A0071E11C /* ARKidsUITests.swift */,
 				8B4C9735239EC90A0071E11C /* Info.plist */,
 			);
@@ -320,6 +329,17 @@
 				8B4C973C239EDCE30071E11C /* ProcessInfo+UITest.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8B4C973E23A01DEA0071E11C /* PageObjects */ = {
+			isa = PBXGroup;
+			children = (
+				8B4C974523A025160071E11C /* BaseScreen.swift */,
+				8B4C973F23A01E180071E11C /* MainScreen.swift */,
+				8B4C974123A01E4B0071E11C /* ProfileScreen.swift */,
+				8B4C974323A01E5C0071E11C /* MarketScreen.swift */,
+			);
+			path = PageObjects;
 			sourceTree = "<group>";
 		};
 		C09959A402D522B5F591723E /* Frameworks */ = {
@@ -512,7 +532,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B4C974023A01E180071E11C /* MainScreen.swift in Sources */,
+				8B4C974423A01E5C0071E11C /* MarketScreen.swift in Sources */,
+				8B4C974223A01E4B0071E11C /* ProfileScreen.swift in Sources */,
 				8B4C9734239EC90A0071E11C /* ARKidsUITests.swift in Sources */,
+				8B4C974623A025160071E11C /* BaseScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

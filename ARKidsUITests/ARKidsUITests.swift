@@ -9,40 +9,56 @@
 import XCTest
 
 class ARKidsUITests: XCTestCase {
-
+    
+    private var app: XCUIApplication!
+    private var mainScreen: MainScreen!
+    private var profileScreen: ProfileScreen!
+    private var marketScreen: MarketScreen!
+    
+    private var backButton: XCUIElement {
+        return app.navigationBars.buttons.firstMatch
+    }
+    
     override func setUp() {
         continueAfterFailure = false
+        
+        app = XCUIApplication()
+        mainScreen = MainScreen(app: app)
+        profileScreen = ProfileScreen(app: app)
+        marketScreen = MarketScreen(app: app)
     }
 
     func testCheckBicycle() {
-        let app = XCUIApplication()
         app.launch()
         
-        app.tables.cells.element(boundBy: 0).tap()
-        app.buttons["marketButton"].tap()
+        mainScreen.gardenerCell.tap()
+        profileScreen.marketButton.tap()
         app.swipeUp()
-        app.cells["productCell"].buttons["300 $"].tap()
-        app.buttons["Profile"].tap()
+        
+        marketScreen.priceButton(price: 300).tap()
+        backButton.tap()
         app.swipeUp()
-        XCTAssertTrue(app.cells["productCell"].staticTexts["Bicycle"].exists)
+        
+        XCTAssertTrue(profileScreen.bicycleLabel.exists)
     }
     
-    func testCheckProcent() {
-        let app = XCUIApplication()
+    func testCheckPercent() {
         app.launchArguments = ["UITest"]
         app.launch()
         
         app.tables.cells.element(boundBy: 0).tap()
-        app.buttons["marketButton"].tap()
+        profileScreen.marketButton.tap()
         app.swipeUp()
+        marketScreen.priceButton(price: 100).tap()
+        
         let predicate = NSPredicate(format: "label CONTAINS '25%'")
-        app.cells["productCell"].buttons["100 $"].tap()
-        XCTAssertTrue(app.staticTexts.containing(predicate).firstMatch.exists)
-        app.buttons["Thanks!"].tap()
-        app.buttons["Profile"].tap()
+        XCTAssertTrue(marketScreen.alertMessageLabel(for: predicate).exists)
+        
+        marketScreen.thanksAlertButton.tap()
+        backButton.tap()
         app.swipeUp()
-        let createAccountText = app.cells.staticTexts.containing(predicate).firstMatch
-        XCTAssertTrue(createAccountText.exists)
+        
+        XCTAssertTrue(profileScreen.depositLabel(for: predicate).exists)
     }
 
 }
